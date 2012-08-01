@@ -1,0 +1,5 @@
+AuthUserFile /home2/corbomit/.htpasswds/.htpasswd
+AuthName "Login to upload files"
+AuthType Basic
+
+require valid-user

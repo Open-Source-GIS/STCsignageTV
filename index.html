@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+	HTML and javascript based signage system
+	Main screen
+	STC digital signage project
+    ITGS HL project by Matt Chan 2011-12 
+    Homepage: http://themattchan.com
+    Live demo: http://corbomite.org/itgs
+    GitHub: http://github.com/themattchan/STCsignageTV.git
+-->
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!--CSS-->
+<link rel="stylesheet" type="text/css" href="src/style.css" title="business"></link>
+<!--JavaScript-->
+<script type="text/javascript" language="javascript" src="src/timekeeping.js"></script>
+<script type="text/javascript" language="javascript" src="src/feeds.js"></script>
+<script type="text/javascript" language="javascript" src="src/slideshow.js"></script>
+<script type="text/javascript" language="javascript" src="src/jquery-1.7.1.js"></script>
+<script type="text/javascript" language="javascript" src="http://www.google.com/jsapi"></script>
+<title>BusinessTV</title>
+</head>
+
+<body onLoad="
+	getParameters(10,3000,0);
+	runSlideshow('carousel');
+	clock();
+	date();">
+<div id="nav">
+	<div id="nav-left">
+	<div class="nav-logo"><img src="src/stclogo.png" width="71px" height="71px"/></div> <!--/stclogo-->
+    <div class="nav-title">	
+    	<h1 class="nav-title"> 
+	    	Business & Economics
+    	</h1>  
+	</div> <!--/nav-title-->
+	</div> <!--/nav-left-->
+    <div id="nav-right">
+    <div id="clock"></div>
+    <div id="date"></div>
+    </div> <!--/nav-right-->
+    <div style="clear:both"></div>
+</div> <!--/nav-->
+
+<div id="middle-container">
+<div id="carousel-left">
+<img name="carousel" src="1.jpg" border=0>
+</div> <!--carousel-left-->
+
+<div id="bulletin-right">
+<script type="text/javascript">
+  getbulletin();
+  ticker('.bulletin-item','#entries-bulletin',5000,1000);
+</script>
+<ul id="entries-bulletin"></ul>
+</div> <!--/bulletin-right-->
+</div> <!--/middle-container-->
+
+<div id="push-down"></div>
+
+<div id="bottom-rss">
+<script type="text/javascript">
+  getnewsfeeds();
+  ticker('.news-item','#entries-bottom-rss',5000,1000);
+</script>
+<ul id="entries-bottom-rss"></ul>
+</div> <!--bottom-rss-->
+</body>
