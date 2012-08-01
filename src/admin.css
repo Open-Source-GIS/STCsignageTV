@@ -1,0 +1,33 @@
+html {
+	background:grey;
+	font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	overflow:hidden;
+	width:100%;
+	}	
+
+body{
+margin-top, margin-bottom:50px;
+margin-left:auto;
+margin-right:auto;
+background:white;
+width:75%;
+border-radius:20px;
+padding: 25px 50px;
+}
+
+#left{
+display:block;
+float:left;
+width:50%;
+}
+
+#right{
+display:block;
+float:left;
+width:50%;
+}
+
+ul{list-style-type:none;}
+
+
+

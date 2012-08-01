@@ -1,4 +1,4 @@
-AuthUserFile 
+AuthUserFile
 AuthName "Login to upload files"
 AuthType Basic
 
