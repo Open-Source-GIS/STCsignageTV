@@ -6,62 +6,66 @@
     GitHub: http://github.com/themattchan/STCsignageTV.git
 */
 
+//Parameters
 //store all photos in the images directory under root,and name them 1,2,3,4... etc,up to 20
-var imageDir = "images/";
+var imgDir = "images/";
 //random images yes/no
-var random_display = 0;
+var random_slides = 0;
 //initial total number of images in the directory. FALLBACK
-var imageTotal = 20;
+var imgTotal = 20;
 //initial time interval between switch in ms. FALLBACK
 var interval = 1500;
 //function to get user defined parameters
 function getParameters(param1,param2,param3){
-	imageTotal=param1;
+	imgTotal=param1;
 	interval=param2;
-	random_display=param3
+	random_slides=param3
 }
-
+//------------------------------------------------------
 //init array of image links
-var imageNum = 0;
-	imageArray = new Array();
+var imgNum = 0;
+	imgArray = new Array();
 	
-//for loop to iterate through all images, as defined by the global variable imageTotal
-for (i=1; i<imageTotal; i++){
-	imageArray[imageNum++] = new imageItem(imageDir + i + ".jpg");	
+//for loop to iterate through all images, as defined by the global variable imgTotal
+for (i=1; i<imgTotal; i++){
+	imgArray[imgNum++] = new imgElem(imgDir +"Slide"+ i + ".jpg");	
 	}
 	
-//functions to control the slideshow. i think the names are pretty self-explanatory.
-function imageItem(image_location){
-		this.image_item = new Image();
-		this.image_item.src = image_location;
+//functions to control the slideshow. 
+//get location of the current image object
+function imgElem(imgLoc){
+	this.imgInst = new Image();
+	this.imgInst.src = imgLoc;
 	}
-function get_ImageItemLocation(imageObj){
-		return(imageObj.image_item.src)
+	
+//get location of any image object	
+function getImgElemLoc(imgObj){
+	return(imgObj.imgInst.src)
 	}
 
 //function for random numbers (kind of)
 function randNum(x,y){
-		var range = y - x + 1;
-		return Math.floor(Math.random() * range) + x;
+	var range = y - x + 1;
+	return Math.floor(Math.random() * range) + x;
 	}
 	
-//function to go to the next image
-function getNextImage(){
-		if (random_display) {
-			imageNum = randNum(0,imageTotal-1);
-		}
-		else {
-			imageNum = (imageNum+1) % imageTotal;
-		}
-    var new_image = get_ImageItemLocation(imageArray[imageNum]);
-	return(new_image);
+//function to go to the next image. spits out the location of the next image
+//using the getImgElmLoc function
+function getNextImg(){
+		if (random_slides) {imgNum = randNum(0,imgTotal-1);}
+		else {imgNum = (imgNum+1) % imgTotal;}
+    var newImg = getImgElemLoc(imgArray[imgNum]);
+	return(newImg);
 	}
 
 //alas, define the actual slideshow function
 function runSlideshow(id){
-		var new_image = getNextImage();
-		document[id].src = new_image;
-		var recur_call = "runSlideshow('"+id+"')";
-		timerID = setTimeout(recur_call,interval);
-        }
+	//a variable to call the Function
+	var newImg = getNextImg();
+	//put the variable into the HTML through DOM
+	document[id].src = newImg;
+	//infinite loop
+	var looper = "runSlideshow('"+id+"')";
+	timerID = setTimeout(looper,interval);
+	}
 
