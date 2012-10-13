@@ -18,10 +18,12 @@ How to use
 2. Modify the parameters in the index.html file to change:
 
 Slideshow settings:
+
 	getParameters(<total number of images><time interval in ms>,<randomize slideshow Y N>);
 	runSlideshow('carousel');
 	
 RSS slider settings:
+
 	ticker(<rss item id>,<rss container id>,<time delay in ms>,<speed in ms>);
 	
 3. Modify the parameters in the feeds.js file to change the RSS links
@@ -43,25 +45,25 @@ Reference materials and code
 ----------------------------
 
 Documentation and How-tos:
-<http://www.w3schools.com/>
-<http://docs.jquery.com/>
-<http://www.php.net/manual/en/>
-<http://httpd.apache.org/docs/2.2/>
+- <http://www.w3schools.com/>
+- <http://docs.jquery.com/>
+- <http://www.php.net/manual/en/>
+- <http://httpd.apache.org/docs/2.2/>
 
 RSS feed loader:
-<https://developers.google.com/feed/v1/>
-<http://code.google.com/apis/ajax/playground/?exp=feeds>
-<http://www.javascriptkit.com/dhtmltutors/googleajaxfeed.shtml>
+- <https://developers.google.com/feed/v1/>
+- <http://code.google.com/apis/ajax/playground/?exp=feeds>
+- <http://www.javascriptkit.com/dhtmltutors/googleajaxfeed.shtml>
 
 RSS slider:
-<http://workshop.rs/2011/09/news-ticker-in-4-lines-of-jquery/>
+- <http://workshop.rs/2011/09/news-ticker-in-4-lines-of-jquery/>
 
 Slideshow:
-<http://www.webmonkey.com/2010/02/make_a_javascript_slideshow/>
+- <http://www.webmonkey.com/2010/02/make_a_javascript_slideshow/>
 
 PHP slide uploader:
-<http://www.php.net/manual/en/features.file-upload.multiple.php>
-<http://www.php.net/manual/en/function.unlink.php>
+- <http://www.php.net/manual/en/features.file-upload.multiple.php>
+- <http://www.php.net/manual/en/function.unlink.php>
 
 [Matt Chan]: http://themattchan.com
 [Sha Tin College]: http://shatincollege.edu.hk
