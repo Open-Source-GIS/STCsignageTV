@@ -1,4 +1,13 @@
 <?php
+/*  index.php
+	php function to delete all photos in a directory
+    STC digital signage project
+    ITGS HL project by Matt Chan 2011-12 
+    Homepage: http://themattchan.com
+    Live demo: http://themattchan.com/itgsproject
+    GitHub: http://github.com/themattchan/STCsignageTV.git
+*/
+
 function deletephotos(){
     $files = glob("../images/*.jpg"); 
     foreach($files as $del){
@@ -19,7 +28,7 @@ function deletephotos(){
 
 <body>
 
-<h1>Admin for Room 233 Signage TV</h1>
+<h1>Admin for Room 232 Signage TV</h1>
 <h2>Update slideshow</h2>
 
 <div id="left">

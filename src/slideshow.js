@@ -1,8 +1,9 @@
 /*  slideshow.js
-	Quick and dirty JavaScript slideshow 
+	Quick and dirty JavaScript slideshow
 	STC digital signage project
     ITGS HL project by Matt Chan 2011-12 
     Homepage: http://themattchan.com
+    Live demo: http://themattchan.com/itgsproject
     GitHub: http://github.com/themattchan/STCsignageTV.git
 */
 

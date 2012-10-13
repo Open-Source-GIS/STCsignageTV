@@ -1,4 +1,13 @@
 <?php
+/*  uploadindex.php
+	php function upload photos
+    STC digital signage project
+    ITGS HL project by Matt Chan 2011-12 
+    Homepage: http://themattchan.com
+    Live demo: http://themattchan.com/itgsproject
+    GitHub: http://github.com/themattchan/STCsignageTV.git
+*/
+
 $uploads_dir = '../images';
 foreach ($_FILES["image"]["error"] as $key => $error) {
     if ($error == UPLOAD_ERR_OK) {

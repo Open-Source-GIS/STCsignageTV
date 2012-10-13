@@ -3,7 +3,7 @@
 	STC digital signage project
     ITGS HL project by Matt Chan 2011-12 
     Homepage: http://themattchan.com
-    Live demo: http://corbomite.org/itgs
+    Live demo: http://themattchan.com/itgsproject
     GitHub: http://github.com/themattchan/STCsignageTV.git
 */
 
@@ -15,10 +15,7 @@ function clock(){
 	var hr=time.getHours();
 	var min=time.getMinutes();
 	var sec=time.getSeconds();
-	var day=time.getDay();
-	var mnth=time.getMonth();
-	var yr=time.getFullYear();
-	
+
 	//convert the 24 hr format into 12 hr, for aesthetic reasons
 	var ampm=(hr<12)?"AM":"PM"; //add the AM/PM to the date
 	
@@ -41,7 +38,8 @@ function clock(){
 function date(){
 	//get the parameters we need: d,m,y.
 	var time=new Date();
-	var day=time.getDay();
+	var day=time.getDay(); //day of week 0-6
+	var date=time.getDate(); //date in month 1-31
 	var mnth=time.getMonth();
 	var yr=time.getFullYear();
 	
@@ -54,6 +52,6 @@ function date(){
 	
 	//insert into an element with the ID 'date'. when printing the variables in the arrays, the input numbers (e.g. what day it is)
 	//automatically modulo themselves according to the no. of entries in the array.
-	document.getElementById('date').innerHTML=dayArray[day]+", "+day+" "+monthArray[mnth]+" "+yr;
+	document.getElementById('date').innerHTML=dayArray[day]+", "+date+" "+monthArray[mnth]+" "+yr;
 	t=setTimeout('date()',500);
 }

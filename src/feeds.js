@@ -1,9 +1,9 @@
 /*  feeds.js
 	JavaScript feed parser utilizing the Google feed API and jQuery
-	STC digital signage project
+    STC digital signage project
     ITGS HL project by Matt Chan 2011-12 
     Homepage: http://themattchan.com
-    Live demo: http://corbomite.org/itgs
+    Live demo: http://themattchan.com/itgsproject
     GitHub: http://github.com/themattchan/STCsignageTV.git
 */
 
