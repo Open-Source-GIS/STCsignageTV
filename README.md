@@ -28,7 +28,7 @@ RSS slider settings:
 	
 3. Modify the parameters in the feeds.js file to change the RSS links
 
-    var rss=['feed1.rss','feed2.rss',<etc>,];
+    var rss=['feed1.rss','feed2.rss','etc',];
 	
 To use the PHP uploader, the source files must be run from a server supporting PHP. Download and install a copy of XAMPP, and modify the .htaccess file to point to your password file.
 
